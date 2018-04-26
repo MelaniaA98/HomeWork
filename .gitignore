@@ -1,17 +1,32 @@
-n=int(input("N="))
+"""def prim(n): #szam ameddig vizsgalja
+    for i in range(2, n+1):
+        a=0
+        for j in range(2,i):
+            if (i%j!=0): #ha nem prim
+                a+=1
+        if (a==i-2): #ha prim
+            print (i)
 
-def primek(n):
-    if n>1:
-        for i in range(2,n):
-            if (n%i)==0:
-                print (n, "nem prim")
-                break
-        else:
-            print(n, "prim")
-    else:
-        print(n, "nem prim")
+print(prim(20))
 
-a=primek(n)
 
-def hanyadikprim(a):
-    for j in range (1,a):
+l=[int("prim")]
+l.pop()
+
+
+for i in l:
+    print(i[n])"""
+
+
+setA=set(range(2,5000000)) #
+
+for i in range(2,5000000):
+    if i in setA:
+        n=i+i
+        while n<=5000000:
+            setA.discard(n)
+            n+=i
+#print(setA)
+ls=list(setA)
+print(ls)
+print(ls[10001])
