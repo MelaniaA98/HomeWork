@@ -1,3 +1,5 @@
+#12.
+
 """def prim(n): #szam ameddig vizsgalja
     for i in range(2, n+1):
         a=0
@@ -17,20 +19,36 @@ l.pop()
 for i in l:
     print(i[n])"""
 
+setA=set(range(2,150000))
 
-setA=set(range(2,5000000)) #
-
-for i in range(2,5000000):
+for i in range(2,150000):
     if i in setA:
         n=i+i
-        while n<=5000000:
+        while n<=150000:
             setA.discard(n)
             n+=i
 #print(setA)
 ls=list(setA)
 print(ls)
 print(ls[10001])
-
-import time 
-a=time.
+import timeit
+a=timeit.timeit()
 print(a)
+
+
+#5.
+
+""""
+for i in range(1,101):
+    for j in range(1,100):
+        for k in range(1, 101):
+            for l in range(1, 100):
+                if i+j+l+k ==100:
+                    print (i,"+",j,"+",k,"+",l ,"= 100")
+"""
+for i in l:
+    #print(l) #9lista
+    a=l[i]+l[i+1]
+    print(l[i], a )
+
+
