@@ -20,15 +20,15 @@ ls=primek()
 print("The 10 001 prime number is: ", ls[100000]) #(10 000-1) mert lista
 
 
-#masodik probalkozas, set-el
+#masodik probalkozas, set, halmaz szukites
 
-setA=set(range(2,150000)) #set == csak egyszer irja ki, es novekvo sorba rendezi
+setA=set(range(2,150000)) #csak egyser irja ki es novekvo sorrendbe rendezi
 
 for i in range(2,150000):
     if i in setA:
-        n=i+i #
-        while n<=150000:
-            setA.discard(n) #kiveszi az n-t
+        n=i+i #kivesszuk a tobbszorosoket
+        while n<=150000: 
+            setA.discard(n) 
             n+=i
 
 #print(setA)
