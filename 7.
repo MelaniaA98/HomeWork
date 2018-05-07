@@ -12,3 +12,18 @@ def longestpalstr(a):
                     print (k)
 
 b=longestpalstr(a)
+
+
+def longestpalstr(a):
+    c=" "
+    for i in range(len(a)):
+        for j in range(len(a),i,-1):
+            if i==j:
+                while i==j :
+                    c+=i
+                else:
+                    continue
+    print(c)
+
+b=longestpalstr("atrbbrtm")
+print(b)
