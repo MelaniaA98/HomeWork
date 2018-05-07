@@ -1,0 +1,15 @@
+#5. Write a program that outputs all possibilities to put +, - or nothing between the numbers (1, ...9) such that the result is 100.
+
+
+""""
+for i in range(1,101):
+    for j in range(1,100):
+        for k in range(1, 101):
+            for l in range(1, 100):
+                if i+j+l+k ==100:
+                    print (i,"+",j,"+",k,"+",l ,"= 100")
+"""
+for i in l:
+    #print(l) #9lista
+    a=l[i]+l[i+1]
+    print(l[i], a )
