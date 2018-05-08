@@ -1,41 +1,29 @@
 #7. Write a program that finds the longest palindromic substring of a given string. Try to be as efficient as possible!
 
-a=input("Give a string:")
-
-
+#1.stringes
 def longestpalstr(a):
     c=" "
+    #if a==a[::-1]: #ha az egesz szo forditotja es ertelmes
+        #c+=a
+    b=" "
     for i in a:
-        for j in range(i[1],len(a)):
-            if i==j and i+1==j-1:
-                for k in range (i,j):
-                    print (k)
-
-b=longestpalstr(a)
-
-
-def longestpalstr(a):
-    c=" "
-    for i in range(len(a)):
-        for j in range(len(a),i,-1):
+        for j in a[::-1]:
             if i==j:
-                while i==j :
-                    c+=i
-                else:
-                    continue
-    print(c)
+                b += j
+                break #ne ismetelje a betut
+            else:
+                a[i]=a[i+1]
+                continue
+    print(b)
 
-b=longestpalstr("atrbbrtm")
-print(b)
+    #print(c)
 
 
+b=longestpalstr("battar")
 
-a="bamintinm"
-a.lower() #csak kisbetuk
-#szokozok kiszedese
 
-l=[]
-
+#2. listas
+a="batta"
 for i in a:
     l.append(i)
 print(l) #normalis lista
@@ -44,7 +32,16 @@ lf= l[::-1] #forditott lista
 print(lf)
 
 def keres():
+    new=" "
     for j in l:
         for k in lf:
-            print(j,k)
+            if k ==j:
+                new+=k
+                break
+            else:
+                j[]+=1
+                continue
+    print(a)
+
+print(keres())
 
