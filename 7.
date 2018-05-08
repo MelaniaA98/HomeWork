@@ -27,3 +27,24 @@ def longestpalstr(a):
 
 b=longestpalstr("atrbbrtm")
 print(b)
+
+
+
+a="bamintinm"
+a.lower() #csak kisbetuk
+#szokozok kiszedese
+
+l=[]
+
+for i in a:
+    l.append(i)
+print(l) #normalis lista
+
+lf= l[::-1] #forditott lista
+print(lf)
+
+def keres():
+    for j in l:
+        for k in lf:
+            print(j,k)
+
