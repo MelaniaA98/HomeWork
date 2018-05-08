@@ -1,5 +1,21 @@
 #7. Write a program that finds the longest palindromic substring of a given string. Try to be as efficient as possible!
 
+import string
+
+def No_upper_white_punct(a):
+    a=a.lower() #ha nagybetu van benne 
+    no= string.whitespace + string.punctuation #ures resz es irasjelek
+
+    for i in a: #vegigmegy a stringen
+        if i in no: #ha i benne van a no-ban
+            a=a.replace(i,'') #cserelje ki ures stringre
+    print(a)
+
+
+
+
+
+
 #1.stringes
 def longestpalstr(a):
     c=" "
