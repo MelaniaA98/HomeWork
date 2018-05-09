@@ -2,6 +2,24 @@
 
 
 
+#megoldas
+def szaz_szamok_jelek():
+   from itertools import product #meghivjuk a csomagot, #iteration == egymas melle tesz kulonbozo helyekrol elemeket
+                                                        #iterables == ertelmet ad
+                                                        #product() == generator ==((x,y) for x in A for y in B)
+   veg= []
+   szamok = range(1, 10)
+   for jelek in product(['+','-', ''], repeat=8): # ertelmezi hanyszor hasznalja
+       tuples = zip(szamok, jelek + ("", )) # szamok melle a jelek
+       expr = ''.join([str(e1) + e2 for (e1, e2) in tuples]) # kifejezes stringge alakitasa
+                                                            #.join == metodus a szamok koze jelek
+       if eval(expr) == 100: # az ertek legyen 100
+                             #eval() == funkcio 
+
+           veg.append(expr + ' = 100') #a vegehez irja a 100-ast
+   return veg
+
+print(szaz_szamok_jelek())
 
 
 #probalkozas
@@ -29,5 +47,3 @@ for i in seta:
                                         print(i,"+",j,"+",k,"+",l,"+",m,"+",n,"+",o,"+",p,"+",q,"= 100")
                                     elif i-j+k+l+m+n+o+p+q==100:
                                     ...
-
-#2.
