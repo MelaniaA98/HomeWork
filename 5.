@@ -14,7 +14,7 @@ def szaz_szamok_jelek():
        expr = ''.join([str(e1) + e2 for (e1, e2) in tuples]) # kifejezes stringge alakitasa
                                                             #.join == metodus a szamok koze jelek
        if eval(expr) == 100: # az ertek legyen 100
-                             #eval() == funkcio 
+                             #eval() == funkcio ami a stringet kifejezesse alakitja, megvizsgalja es eredmenyt ad ez alapjan
 
            veg.append(expr + ' = 100') #a vegehez irja a 100-ast
    return veg
