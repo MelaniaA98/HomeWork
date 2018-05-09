@@ -43,29 +43,25 @@ print (osszefoglal("Trrta b,bbba"))
 #mas probalkozas
 
 #1.stringes
+
 def longestpalstr(a):
-    c=" "
     #if a==a[::-1]: #ha az egesz szo forditotja es ertelmes
-        #c+=a
-    b=" "
+        return a
     for i in a:
-        for j in a[::-1]:
-            if i==j:
-                b += j
-                break #ne ismetelje a betut
-            else:
-                a[i]=a[i+1]
-                continue
-    print(b)
+        if i==i[:+1:-1]:
+            break #ne ismetelje a betut
+        else:
+            a=a.replace(i,"")
 
-    #print(c)
-
+    print(a)
 
 b=longestpalstr("battar")
+print(b)
 
 
 #2. listas
-a="batta"
+l=[]
+a="bamintinm"
 for i in a:
     l.append(i)
 print(l) #normalis lista
@@ -74,16 +70,12 @@ lf= l[::-1] #forditott lista
 print(lf)
 
 def keres():
-    new=" "
+    a=[]
     for j in l:
-        for k in lf:
+        for k in lf[:len(lf)-1]:
             if k ==j:
-                new+=k
+                a.append(j)
                 break
-            else:
-                j[]+=1
-                continue
-    print(a)
+    print(a)        
 
 print(keres())
-
