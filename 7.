@@ -1,20 +1,46 @@
 #7. Write a program that finds the longest palindromic substring of a given string. Try to be as efficient as possible!
 
+#1. megoldas
 import string
 
-def No_upper_white_punct(a):
-    a=a.lower() #ha nagybetu van benne 
+def string_odavissza(b): 
+
+    #1.semmi nagybetu, szokoz vagy irasjel
+    b=b.lower() #ha nagybetu van benne
     no= string.whitespace + string.punctuation #ures resz es irasjelek
 
-    for i in a: #vegigmegy a stringen
+    for i in b: #vegigmegy a stringen
         if i in no: #ha i benne van a no-ban
-            a=a.replace(i,'') #cserelje ki ures stringre
-    print(a)
+            b=b.replace(i,'') # az i-t lecereljuk az ures stringre
+    #print(a) #proba
+    
+    
+    #leszukiti a stringet csak a palindrome-ra
+    l = len(b) #hossz
+    for vege in range(l, 0, -1): #visszafele halad a hosszon
+        for i in range(l-vege+1): #(hossz - vissz fele haladva a hosszt)+1 ha megegyezik es megy tovabb
+            #print (vege,i) #proba
+            yield b[i: i+vege] #nem return mert az megallna,
+                               #yield== a funkcio egy generatort ad vissza, nem fut le.
+                               #string elejetol vegig
+            #print(b) #proba
+    print(b)
+
+def palindrome(b): #boolean, tenyleg palindrome
+    return b == b[::-1] #ha megegyezik
+
+#main():
+def osszefoglal(b):
+    for l in string_odavissza(b):
+        if palindrome(l)==True:
+            return l
+
+print (osszefoglal("Trrta b,bbba"))
 
 
 
 
-
+#mas probalkozas
 
 #1.stringes
 def longestpalstr(a):
