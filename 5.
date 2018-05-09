@@ -13,3 +13,26 @@ for i in l:
     #print(l) #9lista
     a=l[i]+l[i+1]
     print(l[i], a )
+
+
+seta={1, 12, 123}
+setb={2,23}
+setc={3,34}
+setd={4,45}
+sete={5,56}
+setf={6,67}
+setg={7,78,}
+seth={8,89}
+seti={9}
+for i in seta:
+    for j in setb:
+        for k in setc:
+            for l in setd:
+                for m in sete:
+                    for n in setf:
+                        for o in setg:
+                            for p in seth:
+                                for q in seti:
+                                    if i+j+k+l+m+n+o+p+q==100:
+                                        print(i,"+",j,"+",k,"+",l,"+",m,"+",n,"+",o,"+",p,"+",q,"= 100")
+                                    elif i-j+k+l+m+n+o+p+q==100:
