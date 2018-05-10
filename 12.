@@ -17,7 +17,7 @@ def primek():
 #lista 10 001. eleme
 print(primek())
 ls=primek()
-print("The 10 001 prime number is: ", ls[100000]) #(10 000-1) mert lista
+print("The 10 001 prime number is: ", ls[100000]) #(10 000-1)
 
 
 #masodik probalkozas, set, halmaz szukites
